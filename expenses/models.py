@@ -15,7 +15,7 @@ class Expense(models.Model):
     description = models.CharField(max_length=255, blank=True)
     amount = models.DecimalField(max_digits=12, decimal_places=2)
     date = models.DateField(auto_now_add=True)
-    posted_to_ledger = models.BooleanField()
+    posted_to_ledger = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.category} - {self.amount}"

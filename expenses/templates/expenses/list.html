@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Expenses</h2>
+<div class="box">
+  <table>
+    <tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th></tr>
+    {% for e in expenses %}
+      <tr>
+        <td>{{ e.date }}</td>
+        <td>{{ e.get_category_display }}</td>
+        <td>{{ e.description }}</td>
+        <td>{{ e.amount }}</td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="4">No expenses yet.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

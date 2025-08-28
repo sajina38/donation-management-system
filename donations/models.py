@@ -7,16 +7,16 @@ from django.utils import timezone
 class Event(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=255)
-    created_at = models.DateField(null=True)
+    start_date = models.DateField(null=True)
     end_date = models.DateField(null=True)
      
     def __str__(self):
         return self.name
 
-class Donation:
+class Donation(models.Model):
     CASH_METHOD = "CASH"    # valid options banako
     BANK_METHOD = "BANK"    # to record people's payment_method
-    ONLINE_METHOD = "Cash"   # and for using in models below
+    ONLINE_METHOD = "Online"   # and for using in models below
     METHOD_CHOICES = [
         (CASH_METHOD ,"Cash"),
         (BANK_METHOD ,"Bank"),
@@ -37,7 +37,7 @@ class Donation:
     method = models.CharField(max_length=10, choices=METHOD_CHOICES)
     date = models.DateField(default=timezone.localdate)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=STATUS_PENDING)
-    posted_to_ledger = models.BooleanField()
+    posted_to_ledger = models.BooleanField(default=False)
     receipt_pdf = models.FileField(upload_to="receipts/", blank=True, null=True)
 
     def __str__(self):

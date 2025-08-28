@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Donations</h2>
+<div class="box">
+  <table>
+    <tr><th>Date</th><th>Donor</th><th>Amount</th><th>Method</th><th>Status</th><th>Event</th></tr>
+    {% for d in donations %}
+      <tr>
+        <td>{{ d.date }}</td>
+        <td>{{ d.donor.name }}</td>
+        <td>{{ d.amount }}</td>
+        <td>{{ d.get_method_display }}</td>
+        <td>{{ d.status }}</td>
+        <td>{{ d.event }}</td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="6">No donations yet.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

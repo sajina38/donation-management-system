@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Record Donation</h2>
+<form method="post" class="box">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save Donation</button>
+</form>
+{% endblock %}
