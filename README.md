@@ -34,36 +34,61 @@ A Django-based web application to manage donors, donations, expenses, and report
 
 ## 🛠️ Setup
 
-# 1️⃣ Clone the repository
+## 1️⃣ Clone the repository
 git clone https://github.com/your-username/donation-management-system
 cd donation-management-system
 
-# 2️⃣ Create virtual environment
+## 2️⃣ Create virtual environment
 python -m venv venv
 
-# 3️⃣ Activate virtual environment
-# On Windows:
+## 3️⃣ Activate virtual environment
+## On Windows:
 .\venv\Scripts\activate
-# On Linux/Mac:
+## On Linux/Mac:
 source venv/bin/activate
 
-# 4️⃣ Install dependencies
+## 4️⃣ Install dependencies
 pip install -r requirements.txt
 
-# 5️⃣ Setup database
+## 5️⃣ Setup database
 python manage.py makemigrations
 python manage.py migrate
 
-# 6️⃣ Create superuser (for admin access)
+## 6️⃣ Create superuser (for admin access)
 python manage.py createsuperuser
 
-# 7️⃣ Run development server
+## 7️⃣ Run development server
 python manage.py runserver
 
-# 8️⃣ Open in browser
-# 👉 http://127.0.0.1:8000/
+## 8️⃣ Open in browser
+## 👉 http://127.0.0.1:8000/
 
-# 📂 Apps Structure:
-# donors → manage donors
-# donations → manage donations + reports
-# expenses → manage expenses
+## 📂 Apps Structure:
+## donors → manage donors
+## donations → manage donations + reports
+## expenses → manage expenses
+
+# 📊 Sample Data Used in the Project
+
+## Donors
+
+Name	Email	Contact
+Sajina Gurung	sajinagrg0@gmail.com
+	9999328371
+Jharana Gurung	jhagrg7@gmail.com
+	9255328371
+Sunita Poudel	sunitapdl6@gmail.com
+	9123456797
+
+## Donations
+
+Date	Donor	Amount	Method	Status	Event
+Aug. 13, 2025	Sajina Gurung	10000.00	Bank	CONFIRMED	School Fund 2025
+Aug. 2, 2025	Jharana Gurung	5000.00	Cash	PENDING	Arts Festival Fund
+Aug. 29, 2025	Sunita Poudel	50000.00	Online	CONFIRMED	School Fund 2025
+
+## Expenses
+
+Date	Category	Description	Amount
+Aug. 29, 2025	Program	Fund raise for school.	50000.00
+Aug. 29, 2025	Admin	Supplies for fund management.	6000.00
