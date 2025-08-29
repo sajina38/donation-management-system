@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from .models import Donation
 from .forms import DonationForm
 from expenses.models import Expense
+from . import models
+from django.db.models import Sum
 
 # Create your views here.
 
@@ -25,8 +27,8 @@ def donation_list(request):
 
 
 def reports(request):
-    total_donations = Donation.objects.all().aggregate(sum_amount=models.Sum("amount"))["sum_amount"] or 0
-    total_expenses = Expense.objects.all().aggregate(sum_amount=models.Sum("amount"))["sum_amount"] or 0
+    total_donations = Donation.objects.aggregate(sum_amount=Sum("amount"))["sum_amount"] or 0
+    total_expenses = Expense.objects.aggregate(sum_amount=Sum("amount"))["sum_amount"] or 0
     remaining = total_donations - total_expenses
 
     context = {
