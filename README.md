@@ -72,23 +72,25 @@ python manage.py runserver
 
 ## Donors
 
-Name	Email	Contact
-Sajina Gurung	sajinagrg0@gmail.com
-	9999328371
-Jharana Gurung	jhagrg7@gmail.com
-	9255328371
-Sunita Poudel	sunitapdl6@gmail.com
-	9123456797
+Sajina Gurung | sajinagrg0@gmail.com
+ | 9999328371
+
+Jharana Gurung | jhagrg7@gmail.com
+ | 9255328371
+
+Sunita Poudel | sunitapdl6@gmail.com
+ | 9123456797
 
 ## Donations
 
-Date	Donor	Amount	Method	Status	Event
-Aug. 13, 2025	Sajina Gurung	10000.00	Bank	CONFIRMED	School Fund 2025
-Aug. 2, 2025	Jharana Gurung	5000.00	Cash	PENDING	Arts Festival Fund
-Aug. 29, 2025	Sunita Poudel	50000.00	Online	CONFIRMED	School Fund 2025
+Aug. 13, 2025 → Sajina Gurung donated 10,000 via Bank (Status: Confirmed, Event: School Fund 2025)
+
+Aug. 2, 2025 → Jharana Gurung donated 5,000 via Cash (Status: Pending, Event: Arts Festival Fund)
+
+Aug. 29, 2025 → Sunita Poudel donated 50,000 via Online (Status: Confirmed, Event: School Fund 2025)
 
 ## Expenses
 
-Date	Category	Description	Amount
-Aug. 29, 2025	Program	Fund raise for school.	50000.00
-Aug. 29, 2025	Admin	Supplies for fund management.	6000.00
+Aug. 29, 2025 → Program expense: Fund raise for school (50,000)
+
+Aug. 29, 2025 → Admin expense: Supplies for fund management (6,000)
